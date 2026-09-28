@@ -46,6 +46,33 @@ source .venv/bin/activate
 GMR'nin `assets/body_models/smplx/` dizininde gerekli SMPL-X model dosyalarının
 bulunduğundan emin olun.
 
+## Hazır eğitilmiş dosyalar: G1 halay
+
+Repo, doğrudan denenebilen hazır bir G1 halay politikası içerir:
+
+- Hareket: `src/assets/motions/g1/halay_loop.npz`
+- Eğitim checkpoint'i: `artifacts/g1_halay/checkpoints/model_5000.pt`
+- ONNX politikası: `artifacts/g1_halay/exported/policy.onnx`
+- Eğitim ayarları: `artifacts/g1_halay/params/`
+
+Hazır politikayı MuJoCo simülasyonunda çalıştırmak için:
+
+```bash
+python scripts/play.py Unitree-G1-Tracking-No-State-Estimation \
+  --motion-file src/assets/motions/g1/halay_loop.npz \
+  --checkpoint-file artifacts/g1_halay/checkpoints/model_5000.pt
+```
+
+Video kaydetmek için:
+
+```bash
+python scripts/play.py Unitree-G1-Tracking-No-State-Estimation \
+  --motion-file src/assets/motions/g1/halay_loop.npz \
+  --checkpoint-file artifacts/g1_halay/checkpoints/model_5000.pt \
+  --video True \
+  --video-length 500
+```
+
 ## Videodan motion üretme ve eğitimi başlatma
 
 Sabit kamerayla çekilmiş, tek kişinin net göründüğü bir video için:
