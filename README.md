@@ -31,6 +31,74 @@ Projede daha önce oluşturulmuş `.venv` kullanılıyorsa:
 source .venv/bin/activate
 ```
 
+## MP4 videodan eğitim başlatma
+
+Repo, aşağıdaki uçtan uca akışı otomatikleştirir:
+
+`MP4 → GVHMR → SMPL-X → GMR → G1 CSV → loop düzeltme → NPZ → eğitim`
+
+Pipeline, varsayılan olarak şu iki harici projeyi kullanır:
+
+- [GVHMR](https://github.com/ryanrudes/gvhmr): `~/GVHMR-blackwell`
+- [GMR](https://github.com/YanjieZe/GMR): `~/GMR`
+
+Her iki projeyi kendi kurulum talimatlarıyla hazırlayın. GMR'nin
+`assets/body_models/smplx/` dizininde kişisel olarak indirdiğiniz SMPL-X gövde
+modelleri bulunmalıdır. Model dosyaları ve ağırlıklar bu repoya eklenmez.
+
+Sabit kamerayla çekilmiş, tek kişinin net göründüğü bir halay videosundan motion
+üretip eğitimi doğrudan başlatmak için:
+
+```bash
+python scripts/video_to_g1_pipeline.py ~/Videos/halay.mp4 \
+  --motion-name halay_loop \
+  --gvhmr-root ~/GVHMR-blackwell \
+  --gmr-root ~/GMR
+```
+
+Bu komut sırasıyla:
+
+1. GVHMR ile videodan dünya koordinatlarında SMPL-X hareketi çıkarır.
+2. GMR ile hareketi 29-DoF Unitree G1 eklemlerine retarget eder.
+3. Birbirine en yakın başlangıç/bitiş pozlarını otomatik bulur, XY sürüklenmesini
+   kaldırır ve 15 karelik quaternion/joint crossfade uygular.
+4. `src/assets/motions/g1/halay_loop.csv` ve `halay_loop.npz` üretir.
+5. `Unitree-G1-Tracking-No-State-Estimation` eğitimini 4096 ortamla başlatır.
+
+Yalnızca motion dosyasını üretmek, eğitimi başlatmamak için:
+
+```bash
+python scripts/video_to_g1_pipeline.py ~/Videos/halay.mp4 \
+  --motion-name halay_loop \
+  --prepare-only
+```
+
+Hareketli kamera kullanıldıysa örneğin:
+
+```bash
+python scripts/video_to_g1_pipeline.py ~/Videos/halay.mp4 \
+  --motion-name halay_loop \
+  --moving-camera \
+  --gvhmr-camera simplevo
+```
+
+Daha önce GVHMR sonucu üretildiyse pahalı video analizini atlayabilirsiniz:
+
+```bash
+python scripts/video_to_g1_pipeline.py ~/Videos/halay.mp4 \
+  --motion-name halay_loop \
+  --gvhmr-result ~/GVHMR-blackwell/outputs/demo/halay/hmr4d_results.pt
+```
+
+Ara dosyalar ve kullanılan GVHMR/GMR Git commit'leri
+`pipeline_runs/<motion-name>/pipeline_run.json` içinde kaydedilir. Bu dizin Git'e
+eklenmez.
+
+> GVHMR'nin lisansı eğitim, araştırma ve ticari olmayan kullanımla sınırlıdır.
+> SMPL-X gövde modelleri ayrıca kayıt/lisans gerektirir. Bu repo yalnızca
+> orkestrasyon kodunu içerir; üçüncü taraf kodu, ağırlıkları ve gövde modellerini
+> yeniden dağıtmaz.
+
 ## Halayı çalıştırma
 
 Repo ana dizinindeyken aşağıdaki komutu çalıştırın:

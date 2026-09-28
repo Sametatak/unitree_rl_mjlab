@@ -4,6 +4,7 @@ __pycache__/
 .idea
 outputs
 logs
+pipeline_runs
 wandb
 MUJOCO_LOG.TXT
 deploy/robots/go2/build
