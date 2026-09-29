@@ -1,0 +1,41 @@
+{
+  "source": "/home/forkon/IsaacLab/projects/unitree_gangnam/assets/motion.csv",
+  "source_sha256": "d74f54662546969826a25386a21f429b6b7f8fd4793578c9923ca5ce4e9ee0aa",
+  "start_s": 5.2,
+  "duration_s": 22.0,
+  "fps": 60.0,
+  "frames": 1321,
+  "joint_names": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "waist_roll_joint",
+    "waist_yaw_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_roll_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_roll_joint"
+  ],
+  "clipped_joint_values": 47,
+  "max_torso_error_rad": 0.30673979449721456,
+  "root_height_offset_range_m": [
+    -0.0697275217337873,
+    0.003016617883824296
+  ],
+  "limitations": "First-pass reference only: no foot XY locking, limb IK, collision avoidance or balance validation."
+}
