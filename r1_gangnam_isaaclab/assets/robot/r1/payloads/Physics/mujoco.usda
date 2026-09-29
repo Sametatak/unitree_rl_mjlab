@@ -1,0 +1,1058 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "MuJoCo USD Converter v0.2.0"
+    }
+    defaultPrim = "r1"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp0ak8ay33/r1.usdc
+
+
+Generated from Composed Stage of root layer /tmp/mjcf_import_r1_ge5qmtw1/usdex_r1/r1.usdc
+
+
+Generated from Composed Stage of root layer /tmp/mjcf_import_r1_ge5qmtw1/temp_r1/r1.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "r1"
+{
+    over "Geometry"
+    {
+        over "pelvis"
+        {
+            over "pelvis_collision" (
+                prepend apiSchemas = ["MjcCollisionAPI"]
+            )
+            {
+                uniform int mjc:condim = 6
+                uniform int mjc:group = 3
+                uniform int mjc:priority = 1
+            }
+
+            over "imu" (
+                prepend apiSchemas = ["MjcSiteAPI"]
+            )
+            {
+                uniform int mjc:group = 5
+            }
+
+            over "left_hip_pitch_link"
+            {
+                over "left_hip_roll_link"
+                {
+                    over "left_hip_collision" (
+                        prepend apiSchemas = ["MjcCollisionAPI"]
+                    )
+                    {
+                        uniform int mjc:condim = 6
+                        uniform int mjc:group = 3
+                        uniform int mjc:priority = 1
+                    }
+
+                    over "left_hip_yaw_link"
+                    {
+                        over "left_thigh_collision" (
+                            prepend apiSchemas = ["MjcCollisionAPI"]
+                        )
+                        {
+                            uniform int mjc:condim = 6
+                            uniform int mjc:group = 3
+                            uniform int mjc:priority = 1
+                        }
+
+                        over "left_knee_link"
+                        {
+                            over "left_shin_collision" (
+                                prepend apiSchemas = ["MjcCollisionAPI"]
+                            )
+                            {
+                                uniform int mjc:condim = 6
+                                uniform int mjc:group = 3
+                                uniform int mjc:priority = 1
+                            }
+
+                            over "left_linkage_brace_collision" (
+                                prepend apiSchemas = ["MjcCollisionAPI"]
+                            )
+                            {
+                                uniform int mjc:condim = 6
+                                uniform int mjc:group = 3
+                                uniform int mjc:priority = 1
+                            }
+
+                            over "left_ankle_pitch_link"
+                            {
+                                over "left_ankle_roll_link"
+                                {
+                                    over "left_foot1_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "left_foot2_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "left_foot3_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "left_foot4_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "left_foot5_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "left_foot6_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "left_foot7_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "left_foot" (
+                                        prepend apiSchemas = ["MjcSiteAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:group = 5
+                                    }
+
+                                    over "left_ankle_roll_joint" (
+                                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                        prepend apiSchemas = ["MjcJointAPI"]
+                                    )
+                                    {
+                                        uniform double mjc:armature = 0.01
+                                        uniform double mjc:damping = 0.05
+                                        uniform double mjc:frictionloss = 0.2
+                                    }
+
+                                    over "left_ankle_roll_link"
+                                    {
+                                    }
+
+                                    over "left_ankle_constraint_A_link"
+                                    {
+                                    }
+
+                                    over "left_ankle_constraint_B_link"
+                                    {
+                                    }
+                                }
+
+                                over "left_ankle_pitch_joint" (
+                                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                    prepend apiSchemas = ["MjcJointAPI"]
+                                )
+                                {
+                                    uniform double mjc:armature = 0.01
+                                    uniform double mjc:damping = 0.05
+                                    uniform double mjc:frictionloss = 0.2
+                                }
+
+                                over "left_ankle_pitch_link"
+                                {
+                                }
+                            }
+
+                            over "left_knee_joint" (
+                                delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                prepend apiSchemas = ["MjcJointAPI"]
+                            )
+                            {
+                                uniform double mjc:armature = 0.01
+                                uniform double mjc:damping = 0.05
+                                uniform double mjc:frictionloss = 0.2
+                            }
+
+                            over "left_knee_link"
+                            {
+                            }
+                        }
+
+                        over "left_hip_yaw_joint" (
+                            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                            prepend apiSchemas = ["MjcJointAPI"]
+                        )
+                        {
+                            uniform double mjc:armature = 0.01
+                            uniform double mjc:damping = 0.05
+                            uniform double mjc:frictionloss = 0.2
+                        }
+
+                        over "left_hip_yaw_link"
+                        {
+                        }
+                    }
+
+                    over "left_hip_roll_joint" (
+                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                        uniform double mjc:armature = 0.01
+                        uniform double mjc:damping = 0.05
+                        uniform double mjc:frictionloss = 0.2
+                    }
+
+                    over "left_hip_roll_link"
+                    {
+                    }
+                }
+
+                over "left_hip_pitch_joint" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                    uniform double mjc:armature = 0.01
+                    uniform double mjc:damping = 0.05
+                    uniform double mjc:frictionloss = 0.2
+                }
+
+                over "left_hip_pitch_link"
+                {
+                }
+            }
+
+            over "right_hip_pitch_link"
+            {
+                over "right_hip_roll_link"
+                {
+                    over "right_hip_collision" (
+                        prepend apiSchemas = ["MjcCollisionAPI"]
+                    )
+                    {
+                        uniform int mjc:condim = 6
+                        uniform int mjc:group = 3
+                        uniform int mjc:priority = 1
+                    }
+
+                    over "right_hip_yaw_link"
+                    {
+                        over "right_thigh_collision" (
+                            prepend apiSchemas = ["MjcCollisionAPI"]
+                        )
+                        {
+                            uniform int mjc:condim = 6
+                            uniform int mjc:group = 3
+                            uniform int mjc:priority = 1
+                        }
+
+                        over "right_knee_link"
+                        {
+                            over "right_shin_collision" (
+                                prepend apiSchemas = ["MjcCollisionAPI"]
+                            )
+                            {
+                                uniform int mjc:condim = 6
+                                uniform int mjc:group = 3
+                                uniform int mjc:priority = 1
+                            }
+
+                            over "right_linkage_brace_collision" (
+                                prepend apiSchemas = ["MjcCollisionAPI"]
+                            )
+                            {
+                                uniform int mjc:condim = 6
+                                uniform int mjc:group = 3
+                                uniform int mjc:priority = 1
+                            }
+
+                            over "right_ankle_pitch_link"
+                            {
+                                over "right_ankle_roll_link"
+                                {
+                                    over "right_foot1_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "right_foot2_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "right_foot3_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "right_foot4_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "right_foot5_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "right_foot6_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "right_foot7_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "right_foot" (
+                                        prepend apiSchemas = ["MjcSiteAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:group = 5
+                                    }
+
+                                    over "right_ankle_roll_joint" (
+                                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                        prepend apiSchemas = ["MjcJointAPI"]
+                                    )
+                                    {
+                                        uniform double mjc:armature = 0.01
+                                        uniform double mjc:damping = 0.05
+                                        uniform double mjc:frictionloss = 0.2
+                                    }
+
+                                    over "right_ankle_roll_link"
+                                    {
+                                    }
+
+                                    over "right_ankle_constraint_A_link"
+                                    {
+                                    }
+
+                                    over "right_ankle_constraint_B_link"
+                                    {
+                                    }
+                                }
+
+                                over "right_ankle_pitch_joint" (
+                                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                    prepend apiSchemas = ["MjcJointAPI"]
+                                )
+                                {
+                                    uniform double mjc:armature = 0.01
+                                    uniform double mjc:damping = 0.05
+                                    uniform double mjc:frictionloss = 0.2
+                                }
+
+                                over "right_ankle_pitch_link"
+                                {
+                                }
+                            }
+
+                            over "right_knee_joint" (
+                                delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                prepend apiSchemas = ["MjcJointAPI"]
+                            )
+                            {
+                                uniform double mjc:armature = 0.01
+                                uniform double mjc:damping = 0.05
+                                uniform double mjc:frictionloss = 0.2
+                            }
+
+                            over "right_knee_link"
+                            {
+                            }
+                        }
+
+                        over "right_hip_yaw_joint" (
+                            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                            prepend apiSchemas = ["MjcJointAPI"]
+                        )
+                        {
+                            uniform double mjc:armature = 0.01
+                            uniform double mjc:damping = 0.05
+                            uniform double mjc:frictionloss = 0.2
+                        }
+
+                        over "right_hip_yaw_link"
+                        {
+                        }
+                    }
+
+                    over "right_hip_roll_joint" (
+                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                        uniform double mjc:armature = 0.01
+                        uniform double mjc:damping = 0.05
+                        uniform double mjc:frictionloss = 0.2
+                    }
+
+                    over "right_hip_roll_link"
+                    {
+                    }
+                }
+
+                over "right_hip_pitch_joint" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                    uniform double mjc:armature = 0.01
+                    uniform double mjc:damping = 0.05
+                    uniform double mjc:frictionloss = 0.2
+                }
+
+                over "right_hip_pitch_link"
+                {
+                }
+            }
+
+            over "waist_roll_link"
+            {
+                over "torso_link"
+                {
+                    over "torso_collision" (
+                        prepend apiSchemas = ["MjcCollisionAPI"]
+                    )
+                    {
+                        uniform int mjc:condim = 6
+                        uniform int mjc:group = 3
+                        uniform int mjc:priority = 1
+                    }
+
+                    over "head_collision" (
+                        prepend apiSchemas = ["MjcCollisionAPI"]
+                    )
+                    {
+                        uniform int mjc:condim = 6
+                        uniform int mjc:group = 3
+                        uniform int mjc:priority = 1
+                    }
+
+                    over "left_shoulder_pitch_link"
+                    {
+                        over "left_shoulder_roll_link"
+                        {
+                            over "left_shoulder_yaw_link"
+                            {
+                                over "left_shoulder_yaw_collision" (
+                                    prepend apiSchemas = ["MjcCollisionAPI"]
+                                )
+                                {
+                                    uniform int mjc:condim = 6
+                                    uniform int mjc:group = 3
+                                    uniform int mjc:priority = 1
+                                }
+
+                                over "left_elbow_link"
+                                {
+                                    over "left_elbow_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "left_wrist_roll_link"
+                                    {
+                                        over "left_hand_collision" (
+                                            prepend apiSchemas = ["MjcCollisionAPI"]
+                                        )
+                                        {
+                                            uniform int mjc:condim = 6
+                                            uniform int mjc:group = 3
+                                            uniform int mjc:priority = 1
+                                        }
+
+                                        over "left_palm" (
+                                            prepend apiSchemas = ["MjcSiteAPI"]
+                                        )
+                                        {
+                                            uniform int mjc:group = 5
+                                        }
+
+                                        over "left_wrist_roll_joint" (
+                                            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                            prepend apiSchemas = ["MjcJointAPI"]
+                                        )
+                                        {
+                                            uniform double mjc:armature = 0.01
+                                            uniform double mjc:damping = 0.05
+                                            uniform double mjc:frictionloss = 0.2
+                                        }
+
+                                        over "left_wrist_roll_link"
+                                        {
+                                        }
+                                    }
+
+                                    over "left_elbow_joint" (
+                                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                        prepend apiSchemas = ["MjcJointAPI"]
+                                    )
+                                    {
+                                        uniform double mjc:armature = 0.01
+                                        uniform double mjc:damping = 0.05
+                                        uniform double mjc:frictionloss = 0.2
+                                    }
+
+                                    over "left_elbow_link"
+                                    {
+                                    }
+                                }
+
+                                over "left_shoulder_yaw_joint" (
+                                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                    prepend apiSchemas = ["MjcJointAPI"]
+                                )
+                                {
+                                    uniform double mjc:armature = 0.01
+                                    uniform double mjc:damping = 0.05
+                                    uniform double mjc:frictionloss = 0.2
+                                }
+
+                                over "left_shoulder_yaw_link"
+                                {
+                                }
+                            }
+
+                            over "left_shoulder_roll_joint" (
+                                delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                prepend apiSchemas = ["MjcJointAPI"]
+                            )
+                            {
+                                uniform double mjc:armature = 0.01
+                                uniform double mjc:damping = 0.05
+                                uniform double mjc:frictionloss = 0.2
+                            }
+
+                            over "left_shoulder_roll_link"
+                            {
+                            }
+                        }
+
+                        over "left_shoulder_pitch_joint" (
+                            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                            prepend apiSchemas = ["MjcJointAPI"]
+                        )
+                        {
+                            uniform double mjc:armature = 0.01
+                            uniform double mjc:damping = 0.05
+                            uniform double mjc:frictionloss = 0.2
+                        }
+
+                        over "left_shoulder_pitch_link"
+                        {
+                        }
+                    }
+
+                    over "right_shoulder_pitch_link"
+                    {
+                        over "right_shoulder_roll_link"
+                        {
+                            over "right_shoulder_yaw_link"
+                            {
+                                over "right_shoulder_yaw_collision" (
+                                    prepend apiSchemas = ["MjcCollisionAPI"]
+                                )
+                                {
+                                    uniform int mjc:condim = 6
+                                    uniform int mjc:group = 3
+                                    uniform int mjc:priority = 1
+                                }
+
+                                over "right_elbow_link"
+                                {
+                                    over "right_elbow_collision" (
+                                        prepend apiSchemas = ["MjcCollisionAPI"]
+                                    )
+                                    {
+                                        uniform int mjc:condim = 6
+                                        uniform int mjc:group = 3
+                                        uniform int mjc:priority = 1
+                                    }
+
+                                    over "right_wrist_roll_link"
+                                    {
+                                        over "right_hand_collision" (
+                                            prepend apiSchemas = ["MjcCollisionAPI"]
+                                        )
+                                        {
+                                            uniform int mjc:condim = 6
+                                            uniform int mjc:group = 3
+                                            uniform int mjc:priority = 1
+                                        }
+
+                                        over "right_palm" (
+                                            prepend apiSchemas = ["MjcSiteAPI"]
+                                        )
+                                        {
+                                            uniform int mjc:group = 5
+                                        }
+
+                                        over "right_wrist_roll_joint" (
+                                            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                            prepend apiSchemas = ["MjcJointAPI"]
+                                        )
+                                        {
+                                            uniform double mjc:armature = 0.01
+                                            uniform double mjc:damping = 0.05
+                                            uniform double mjc:frictionloss = 0.2
+                                        }
+
+                                        over "right_wrist_roll_link"
+                                        {
+                                        }
+                                    }
+
+                                    over "right_elbow_joint" (
+                                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                        prepend apiSchemas = ["MjcJointAPI"]
+                                    )
+                                    {
+                                        uniform double mjc:armature = 0.01
+                                        uniform double mjc:damping = 0.05
+                                        uniform double mjc:frictionloss = 0.2
+                                    }
+
+                                    over "right_elbow_link"
+                                    {
+                                    }
+                                }
+
+                                over "right_shoulder_yaw_joint" (
+                                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                    prepend apiSchemas = ["MjcJointAPI"]
+                                )
+                                {
+                                    uniform double mjc:armature = 0.01
+                                    uniform double mjc:damping = 0.05
+                                    uniform double mjc:frictionloss = 0.2
+                                }
+
+                                over "right_shoulder_yaw_link"
+                                {
+                                }
+                            }
+
+                            over "right_shoulder_roll_joint" (
+                                delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                                prepend apiSchemas = ["MjcJointAPI"]
+                            )
+                            {
+                                uniform double mjc:armature = 0.01
+                                uniform double mjc:damping = 0.05
+                                uniform double mjc:frictionloss = 0.2
+                            }
+
+                            over "right_shoulder_roll_link"
+                            {
+                            }
+                        }
+
+                        over "right_shoulder_pitch_joint" (
+                            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                            prepend apiSchemas = ["MjcJointAPI"]
+                        )
+                        {
+                            uniform double mjc:armature = 0.01
+                            uniform double mjc:damping = 0.05
+                            uniform double mjc:frictionloss = 0.2
+                        }
+
+                        over "right_shoulder_pitch_link"
+                        {
+                        }
+                    }
+
+                    over "waist_yaw_joint" (
+                        delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                        prepend apiSchemas = ["MjcJointAPI"]
+                    )
+                    {
+                        uniform double mjc:armature = 0.01
+                        uniform double mjc:damping = 0.05
+                        uniform double mjc:frictionloss = 0.2
+                    }
+
+                    over "waist_yaw_link"
+                    {
+                    }
+
+                    over "head_pitch_link"
+                    {
+                    }
+
+                    over "head_yaw_link"
+                    {
+                    }
+                }
+
+                over "waist_roll_joint" (
+                    delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+                    prepend apiSchemas = ["MjcJointAPI"]
+                )
+                {
+                    uniform double mjc:armature = 0.01
+                    uniform double mjc:damping = 0.05
+                    uniform double mjc:frictionloss = 0.2
+                }
+
+                over "waist_roll_link"
+                {
+                }
+            }
+
+            over "pelvis_link"
+            {
+            }
+
+            over "imu_in_pelvis_link"
+            {
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "PhysicsMaterial" (
+            prepend apiSchemas = ["MjcMaterialAPI"]
+        )
+        {
+        }
+
+        def MjcActuator "left_hip_pitch_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -100, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/left_hip_pitch_link/left_hip_pitch_joint>
+        }
+
+        def MjcActuator "left_hip_roll_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -100, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/left_hip_pitch_link/left_hip_roll_link/left_hip_roll_joint>
+        }
+
+        def MjcActuator "left_hip_yaw_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -100, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/left_hip_pitch_link/left_hip_roll_link/left_hip_yaw_link/left_hip_yaw_joint>
+        }
+
+        def MjcActuator "left_knee_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -100, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/left_hip_pitch_link/left_hip_roll_link/left_hip_yaw_link/left_knee_link/left_knee_joint>
+        }
+
+        def MjcActuator "left_ankle_pitch_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -40, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 50
+            uniform double mjc:forceRange:min = -50
+            uniform double[] mjc:gainPrm = [40, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/left_hip_pitch_link/left_hip_roll_link/left_hip_yaw_link/left_knee_link/left_ankle_pitch_link/left_ankle_pitch_joint>
+        }
+
+        def MjcActuator "left_ankle_roll_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -40, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 50
+            uniform double mjc:forceRange:min = -50
+            uniform double[] mjc:gainPrm = [40, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/left_hip_pitch_link/left_hip_roll_link/left_hip_yaw_link/left_knee_link/left_ankle_pitch_link/left_ankle_roll_link/left_ankle_roll_joint>
+        }
+
+        def MjcActuator "right_hip_pitch_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -100, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/right_hip_pitch_link/right_hip_pitch_joint>
+        }
+
+        def MjcActuator "right_hip_roll_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -100, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/right_hip_pitch_link/right_hip_roll_link/right_hip_roll_joint>
+        }
+
+        def MjcActuator "right_hip_yaw_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -100, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/right_hip_pitch_link/right_hip_roll_link/right_hip_yaw_link/right_hip_yaw_joint>
+        }
+
+        def MjcActuator "right_knee_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -100, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/right_hip_pitch_link/right_hip_roll_link/right_hip_yaw_link/right_knee_link/right_knee_joint>
+        }
+
+        def MjcActuator "right_ankle_pitch_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -40, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 50
+            uniform double mjc:forceRange:min = -50
+            uniform double[] mjc:gainPrm = [40, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/right_hip_pitch_link/right_hip_roll_link/right_hip_yaw_link/right_knee_link/right_ankle_pitch_link/right_ankle_pitch_joint>
+        }
+
+        def MjcActuator "right_ankle_roll_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -40, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 50
+            uniform double mjc:forceRange:min = -50
+            uniform double[] mjc:gainPrm = [40, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/right_hip_pitch_link/right_hip_roll_link/right_hip_yaw_link/right_knee_link/right_ankle_pitch_link/right_ankle_roll_link/right_ankle_roll_joint>
+        }
+
+        def MjcActuator "waist_roll_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -100, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/waist_roll_joint>
+        }
+
+        def MjcActuator "waist_yaw_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -100, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [100, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/waist_yaw_joint>
+        }
+
+        def MjcActuator "left_shoulder_pitch_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -40, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [40, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/left_shoulder_pitch_link/left_shoulder_pitch_joint>
+        }
+
+        def MjcActuator "left_shoulder_roll_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -40, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [40, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/left_shoulder_pitch_link/left_shoulder_roll_link/left_shoulder_roll_joint>
+        }
+
+        def MjcActuator "left_shoulder_yaw_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -20, -1, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 33
+            uniform double mjc:forceRange:min = -33
+            uniform double[] mjc:gainPrm = [20, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/left_shoulder_pitch_link/left_shoulder_roll_link/left_shoulder_yaw_link/left_shoulder_yaw_joint>
+        }
+
+        def MjcActuator "left_elbow_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -20, -1, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 33
+            uniform double mjc:forceRange:min = -33
+            uniform double[] mjc:gainPrm = [20, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/left_shoulder_pitch_link/left_shoulder_roll_link/left_shoulder_yaw_link/left_elbow_link/left_elbow_joint>
+        }
+
+        def MjcActuator "left_wrist_roll_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -20, -1, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 33
+            uniform double mjc:forceRange:min = -33
+            uniform double[] mjc:gainPrm = [20, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/left_shoulder_pitch_link/left_shoulder_roll_link/left_shoulder_yaw_link/left_elbow_link/left_wrist_roll_link/left_wrist_roll_joint>
+        }
+
+        def MjcActuator "right_shoulder_pitch_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -40, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [40, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/right_shoulder_pitch_link/right_shoulder_pitch_joint>
+        }
+
+        def MjcActuator "right_shoulder_roll_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -40, -2, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 60
+            uniform double mjc:forceRange:min = -60
+            uniform double[] mjc:gainPrm = [40, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/right_shoulder_pitch_link/right_shoulder_roll_link/right_shoulder_roll_joint>
+        }
+
+        def MjcActuator "right_shoulder_yaw_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -20, -1, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 33
+            uniform double mjc:forceRange:min = -33
+            uniform double[] mjc:gainPrm = [20, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/right_shoulder_pitch_link/right_shoulder_roll_link/right_shoulder_yaw_link/right_shoulder_yaw_joint>
+        }
+
+        def MjcActuator "right_elbow_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -20, -1, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 33
+            uniform double mjc:forceRange:min = -33
+            uniform double[] mjc:gainPrm = [20, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/right_shoulder_pitch_link/right_shoulder_roll_link/right_shoulder_yaw_link/right_elbow_link/right_elbow_joint>
+        }
+
+        def MjcActuator "right_wrist_roll_joint"
+        {
+            uniform double[] mjc:biasPrm = [0, -20, -1, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 33
+            uniform double mjc:forceRange:min = -33
+            uniform double[] mjc:gainPrm = [20, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            custom rel mjc:target
+            prepend rel mjc:target = </r1/Geometry/pelvis/waist_roll_link/torso_link/right_shoulder_pitch_link/right_shoulder_roll_link/right_shoulder_yaw_link/right_elbow_link/right_wrist_roll_link/right_wrist_roll_joint>
+        }
+    }
+}
+

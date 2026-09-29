@@ -1,0 +1,4 @@
+# Install into the Python environment used by Isaac Lab, not a separate mjlab environment.
+numpy
+scipy
+onnxruntime
