@@ -26,7 +26,7 @@ bash run.sh --device cpu
 Isaac Lab başka bir klasördeyse:
 
 ```bash
-ISAACLAB_PATH=/kurulum/IsaacLab bash run.sh --device cpu
+ISAACLAB_PYTHON=/kurulum/.venv/bin/python bash run.sh --device cpu
 ```
 
 Eksik Python paketi hatası alırsan, Isaac Lab'in Python ortamına kur:

@@ -31,7 +31,7 @@ for name in ("config.json", "policy.onnx", "motion.npz"):
         parser.error(
             f"Missing {args.bundle / name}; download the complete package (see README.md)."
         )
-if not args.headless and args.visualizer is None:
+if args.visualizer is None:
     args.visualizer = ["kit"]
 app = AppLauncher(args).app
 

@@ -6,8 +6,21 @@
 set -euo pipefail
 PROJECT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 R1_ISAACLAB_DIR="${ISAACLAB_PATH:-${HOME}/IsaacLab}"
-if [[ ! -f "${R1_ISAACLAB_DIR}/isaaclab.sh" ]]; then
-    echo "Isaac Lab bulunamadı. ISAACLAB_PATH=/kurulum/IsaacLab bash run.sh --device cpu" >&2
-    exit 1
-fi
-exec bash "${R1_ISAACLAB_DIR}/isaaclab.sh" -p "${PROJECT_DIR}/play.py" "$@"
+
+# Prefer an explicitly selected Python, then the active environment, followed
+# by the local G1 IsaacLab project's environment used on this workstation.
+python_candidates=(
+    "${ISAACLAB_PYTHON:-}"
+    "${VIRTUAL_ENV:-}/bin/python"
+    "${HOME}/isaac-lab/unitree_g1_tracking_isaaclab/.venv/bin/python"
+    "${R1_ISAACLAB_DIR}/.venv/bin/python"
+)
+for python_exe in "${python_candidates[@]}"; do
+    if [[ -x "${python_exe}" ]] && "${python_exe}" -c "import isaaclab, isaacsim" >/dev/null 2>&1; then
+        exec "${python_exe}" "${PROJECT_DIR}/play.py" "$@"
+    fi
+done
+
+echo "Isaac Lab + Isaac Sim Python ortamı bulunamadı." >&2
+echo "ISAACLAB_PYTHON=/yol/.venv/bin/python bash run.sh --device cpu" >&2
+exit 1
