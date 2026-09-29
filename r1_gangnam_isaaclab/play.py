@@ -33,6 +33,7 @@ for name in ("config.json", "policy.onnx", "motion.npz"):
         )
 if args.visualizer is None:
     args.visualizer = ["kit"]
+headless = "kit" not in args.visualizer
 app = AppLauncher(args).app
 
 import numpy as np
@@ -204,15 +205,15 @@ def main():
         )
         for substep in range(decimation):
             robot.write_data_to_sim()
-            sim.step(render=not args.headless and substep == decimation - 1)
+            sim.step(render=not headless and substep == decimation - 1)
             robot.update(dt)
         step = (step + 1) % frames
         if step == 0 and args.once:
-            if args.headless:
+            if headless:
                 break
             print("Dance finished. Simulation paused; Play starts another cycle.")
             sim.pause()
-        if not args.headless:
+        if not headless:
             time.sleep(max(0.0, step_dt - (time.monotonic() - started)))
 
 

@@ -40,7 +40,7 @@ bash "${ISAACLAB_PATH:-$HOME/IsaacLab}/isaaclab.sh" -p -m pip install -r require
 ```bash
 bash run.sh --device cpu --once        # Bir dans sonunda duraklat
 bash run.sh --device cuda:0            # GPU fiziği
-bash run.sh --device cpu --headless --once  # Arayüzsüz tek tur
+bash run.sh --device cpu --visualizer none --once  # Arayüzsüz tek tur
 ```
 
 Varsayılan olarak dans bitince robot başlangıç pozu ve hızlarına dönüp tekrar
